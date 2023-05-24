@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styleMobile.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Столовая.Ру</title>
+  </head>
+
+<body>
+	<div class="main">
+		<header>
+		<div class="container">
+			<button type="button" class="nav__toggle">
+				<div class="nav__toggle__item"></div>
+			</button>
+	
+			<nav class="nav">
+				<a href="#">Компания</a>
+				<a href="#">Портфолио</a>
+				<a href="#">Проектирование</a>
+	
+				<a href="#">Ресторанам</a>
+				<a href="#">Застройщикам</a>
+				<a href="#">Гос.заказчикам</a>
+				<a href="#">Таблет-питание</a>
+			</nav>
+	
+			<button type="button" class="logo">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55" height="55"	viewBox="0 0 55 55">
+
+  					<image id="fork-and-knife-cutlery-circle-interface-symbol-for-restaurant" width="55" height="55"xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAFl0lEQVRYhb2Za4gWZRTHf76oZd6CAhEytSw3pSgZQrJQvOSXPgjzoVEzqlXLQMELlBb0qUUhtSyULip524ka8EP0ZVNL2CyYkq5rWdSallJUurtFl93iyH+WZ2fn8r67aweWnXmeec75P7dz/ue8g+iDeKE/BJgBzAGmAXXAGGC4tHUA54AvgQ+BQ0BzHER/12qtJoBe6E8CVgKLgKvV3Aq0AN8DbWobCYwT8Alq+xloBLbFQfT1gAL0Qn8s0AAsASpakQNAUxxEp0vGXgPM06RsxbuAfcD6OIh+7DdAL/Trga3ACGCPAY2D6Csv9IcBM/U3FRgPjNaw81rZz4F37S8Ooj+80L8BeAK4H2gHVsdBtLNPAL3QHwrY4PuA48DyOIhiGVkHBMCosglKLgAh8EwcRCe90PeAl4DbtJr1cRD9VTVAL/RtJQ4Cs4AdNlNdgE2mrNaz68i/mvRjuki2MyuAd4AFcRCdTw+oZIAb6oBbGwfRo8B04DNgaQrc4RoBDpIO03WHdK+VrYOyXQxQM0zAbfFC/0EBGZv6bqNWsy9iut423WbDAdnrPPbYKl2IV2xbbXYCtysDwBngehn6to8gE3koDqLdXuhv13YvdS9ON0C5EnOs32hLp2vlslbZXMRGL/QnDABAcztzgfeAY4D52smJC3KNN8iVLNOFaMwBZwpfLTA4XS4kUBR5CnhRfvPNjO/Nxn7ZXC4MDW5nEiHMCe8xV6Lbmj5ziRxxHGxXqu+XOIg+ADq1Gwb0FHAW+An4OEen2dok2+ZrlwhT9wqt0nOD/FzR4W90ni+k+k4VjEPhME/qvdC/EXhaWFZdBKjAv9DOm0UIOeEiP/dWQd8P/QBoNteZI1coXWjYKmIlFvj3e6F/uc5OnnxREj8L43IVE7hXIfSAMM2oKICbNMkXFYWv90sMlAE8U9I/SrG9Se9zKuJzrWIlM0sUHC/pP1vUGQeRXZQyTjhLWMx9TauIs7Woc2rJ4JMl/b+W9COmUyQJBvMCdRUx4eTwji8Z3FrS/1sVAMu+uVb/zSOMqchBtqtxdMFAnO8uJcAEg9kanhUpiuT/ANhDBouXjVBjR42A0/KP3ncocrxhrkmXZ5j6MompI7/r0TB1DFb2NU6N3wFT+gHwIp+Lg2i93l/I+GZkiY6EfNhZPGdbfAK4SY2f9gOcyV1FnV7oj6piARIMkw2bAfzIbq+yr6Mlg9PkIC3PeqF/Zw44u4yvA1eV6DgqLBMNW5JCotTwSAYB6JY4iHL7JHZuDnuh/5wX+nUCdoUX+g8AnwB3l4xvE4Z5ej9kAJuVVC+21BB4LW+0F/qXlRgwGSIm8qTebwd2A9dVMTYUhkXC1FxROcKC82zRna3ic1kyr1h/D0lcUrVuxTK+LaJ7xg8aDVviB5/X+doQB1FLTh5ycYZe6C+s0mBb6n+Z7IyD6IQSe8OyjYSwqlay1zJ+JdXmJrJolR30fV7o3zLAAM1PPi7bVnXYm9Rv3EiyQcpe1vYsdhyvKzZmvt6LLk3SVwawU2euXdWGdmGhB0AR0TXArXYO4yCy2/RIjtLhGtOVM4lugDr0eWfaZJlsbVUpZLVLinvEYuWjVitZ4YX+Gr3XZxjoyHl2pS3nOZFOJydeo5x4X7qYlEUW6lUr2SyQu5S3umfSNZhHINz2NAc06j/XAbdZNnsla70Aqsq0wAG5XQn1zTojXSnjf+YAzFrBTukwUnpMujc7xaNeRCKTbqnKND/ZbuUiE+MgelgM3M1N8i6B235ayfsU6ZgkHStkY35WZYsaCphbxEK6C5hO/0o5VmPjV2qFjfrfEwfRWX1jAaFLgWDDgBQwUyDTJeDDKlfUUgI2tzVbE9iroND/EnDKWFkRPTmbRhqMYxqNS/KcS1dEzwBa7c8QFrqMzvXtZwjgP9KzExiD2kGlAAAAAElFTkSuQmCC"/>
+				</svg>
+
+				<div>
+					<h6>Столовая.РУ</h6>
+					<p>Создание пищеблоков</p>
+				</div>
+			</button>
+
+			<div class="header__buttons">
+				<button type="button" class="search">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54px" height="	60px">
+					<path fill-rule="evenodd"  stroke="rgb(52, 168, 83)" stroke-width="2px" stroke-linecap="butt" 	stroke-linejoin="miter" opacity="0.871" fill="none"
+ 					d="M50.790,55.341 L51.650,56.330 L49.722,57.995 L35.397,41.537 C31.589,43.982 26.998,45.286 	22.131,44.941 C10.179,44.093 1.178,33.752 2.028,21.842 C2.877,9.932 13.255,0.965 25.207,1.812 	C37.159,2.659 46.159,13.000 45.310,24.910 C44.895,30.721 42.202,35.821 38.174,39.433 L51.645,55.228 	L50.790,55.341 Z"/>
+				</svg>
+				</button>
+		
+				<button type="button" class="call">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="51" height="62"	 viewBox="0 0 51 62">
+				<defs>
+					<style>
+						.cls-1 {
+							/*opacity: 0.87;*/
+						}
+					</style>
+				</defs>
+				<image id="telephone-handle-silhouette_2_" data-name="telephone-handle-silhouette (2)" class="cls-1" width="51" height="62" xlink:href="data:img/png;base64,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"/>
+				</svg>
+				</button>
+		
+				<button type="button" class="cart">
+				<div class="cart__inner">
+					<p id="quantityOfGoods">12</p>
+					<img src="../img/header/cartMobile.png" alt="">
+				</div>
+				</button>
+			</div>
+		</div>
+		</header>
+	
+		<button class="categories">
+		<div class="container">
+			<p>Оборудование</p>
+			<p>></p>
+		</div>
+		</button>
+	
+		<div class="slider">
+		
+			<img src="../img/main/slider_1.jpg" alt="">
+			<div class="slider__text">
+			<span>Портфолио</span>
+			<h2>НИИ скорой помощи им. Н.В. Склифосовского</h2>
+			<p>Оборудование для пищеблоков</p>
+			<a href="#">Подробнее</a>
+			</div>
+			
+			<div class="slider__bottom">
+				<button type="button" class="slider__arrow__left"><</button>
+	
+				<div class="circles">
+					<div></div>
+					<div class="active"></div>
+					<div></div>
+					<div></div>
+				</div>
+	
+				<button type="button" class="slider__arrow__right">></button>
+			</div>
+		</div>
+	
+		<div class="sale">
+			<img src="../img/main/giftMobile.png" alt="">
+			<p>Самые низкие цены</p>
+			<h3>Распродажа</h3>
+			<a href="#">Каталог распродаж ></a>
+		</div>
+	
+		<div class="logos">
+			<div class="container">
+				<div class="logos__inner">
+					<a href="#">
+						<img src="../img/main/logos/abat.png" alt="">
+					</a>
+	
+					<a href="#">
+						<img src="../img/main/logos/atesy.png" alt="">
+					</a>
+	
+					<a href="#">
+						<img src="../img/main/logos/hicold.png" alt="">
+					</a>
+	
+					<a href="#">
+						<img src="../img/main/logos/rational.png" alt="">
+					</a>
+	
+					<a href="#">
+						<img src="../img/main/logos/simeco.png" alt="">
+					</a>
+	
+					<a href="#">Все бренды</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="recommendation">
+			<div class="container">
+				<h3>Рекомендуем</h3>
+				<p>В этих разделах вы можете получить подробную информацию о пищевом оборудовании для столовых, 	ресторанов и кафе ведущих производителей.</p>
+	
+				<div class="recommendation__blocks">
+					<div class="recommendation__block">
+						<img src="../img/recommendation/CombiSteamersMobile.png">
+						<div class="recommendation__text">
+							<h5>Rational</h5>
+							<h4>Пароконвектоматы</h4>
+							<p>Благодаря своей универсальности пароконвектоматы быстро завоевывают пользователей по 	всему миру.</p>
+						</div>
+					</div>
+	
+					<div class="recommendation__block">
+						<img src="../img/recommendation/ThermalEquipmentMobile.png">
+						<div class="recommendation__text">
+							<h5>Abat</h5>
+							<h4>Тепловое оборудование</h4>
+							<p>Более 55 лет успешно работает на рынке торгово-технологического оборудования, поправу 	занимая лидирующее положение в данном сегменте.</p>
+						</div>
+					</div>
+						
+					<div class="recommendation__block">
+						<img src="../img/recommendation/RefrigeratedTablesMobile.png">
+						<div class="recommendation__text">
+							<h5>Hicold</h5>
+							<h4>Холодильные столы</h4>
+							<p>Мощный двигатель переводит высокий крутящий момент на режущий инструмент</p>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+
+		<div class="stolovaya">
+
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="151" height="151" viewBox="0 0 151 151">
+  				<image id="fork-and-knife-cutlery-circle-interface-symbol-for-restaurant" width="151" height="151" xlink:href="data:img/png;base64,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"/>
+			</svg>
+
+
+			<h4>Столовая.РУ</h4>
+			<p class="text__gray">создание оптимальных пищеблоков</p>
+			<h5>Группа компаний</h5>
+			<p class="text__gray">Показатели:</p>
+			<p>На рынке: 5 лет</p>
+			<p>Объем контрактов: 4 млрд.р.</p>
+			<p>Количество контрактов: 620</p>
+		</div>
+
+		<div class="solutions">
+			<div class="container">
+				<div class="solution">
+					<h4>Комплексные решения оснащения столовых и кафе</h4>
+
+					<p>Компания «Диалог» предлагает комплексное оснащение столовых, ресторанов, кафе и баров в Москве. Наши услуги построены по принципу полного цикла обслуживания предприятий общепита и бизнеса HoReCa.</p>
+
+					<p>Иными словами, мы предлагаем проектирование «под ключ» и постгарантийное обслуживание. География работы компании охватывает всю страну. При этом в каждом регионе мы готовы География работы компании охватывает всю страну. При этом в каждом регионе мы готовы предложить демократичные цены на профессиональное технологическое оборудование для столовой и оптимальные решения с точки зрения эффективности бизнеса, приемлемым уровнем производительности в условиях ограниченного бюджета.</p>
+				</div>
+
+				<button type="button" class="plus__button">+</button>
+			</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="container">
+				<div class="footer__item">
+					<p>Информация</p>
+					<button type="button" id="info">
+						+
+					</button>
+				</div>
+	
+				<div class="footer__item">
+					<p>Оборудование</p>
+					<button type="button" id="equipment">
+						+
+					</button>
+				</div>
+	
+				<div class="footer__item">
+					<p>Предложения</p>
+					<button type="button" id="offers">
+						+
+					</button>
+				</div>
+	
+				<div class="footer__item">
+					<p>Контакты</p>
+					<button type="button" id="contacts">
+						+
+					</button>
+				</div>
+	
+				<div class="footer__item">
+					<p>Реквизиты</p>
+					<button type="button" id="requisites">
+						+
+					</button>
+				</div>
+			</div>
+		</footer>
+
+		<footer>
+			<div class="container">
+				<div class="footer__bottom">
+				<button type="button" class="logo">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="88" height="88" viewBox="0 0 88 88">
+						<image id="fork-and-knife-cutlery-circle-interface-symbol-for-restaurant" width="88" height="88" xlink:href="data:img/png;base64,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"/>
+					</svg>
+ 
+					<div>
+						<h6>Столовая.РУ</h6>
+						<p>Создание оптимальных пищеблоков</p>
+					</div>
+				</button>
+
+				<h5>Сайт разработан NTI-systems</h5>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+</body>
+</html>

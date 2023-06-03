@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="styleDesktop.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Столовая.Ру</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   </head>
 
 <body>
@@ -12,47 +13,82 @@
 		<header class="header">
 			<div class="container__top">
 				<nav>
-					<a href="#">Компания</a>
-					<a href="#">Портфолио</a>
-					<a href="#">Проектирование</a>
+					<a href="#company">Компания</a>
+					<a href="#portfolio">Портфолио</a>
+					<a href="#project">Проектирование</a>
 				</nav>
 				
 				<div class="vertical_line"></div>
 
 				<nav>
-					<a href="#">Ресторанам</a>
-					<a href="#">Застройщикам</a>
-					<a href="#">Гос.заказчикам</a>
-					<a href="#">Таблет-питание</a>
+					<a href="#restorans">Ресторанам</a>
+					<a href="#developers">Застройщикам</a>
+					<a href="#govCust">Гос.заказчикам</a>
+					<a href="#tablet">Таблет-питание</a>
 				</nav>
 				
 				<div class="vertical_line"></div>
 
 				<nav>
-					<a href="#">Сервис</a>
-					<a href="#">Контакты</a>
-					<a href="#" class="mail"><img src="../img/header/mail.png" alt="">info@stolovay.ru</a>
-					<a href="#" class="phone"><img src="../img/header/phone.png" alt="">8 495 790-72-05</a>
+					<a href="#service">Сервис</a>
+					<a href="#contacts">Контакты</a>
+					<button type="button" class="mail"><img src="../img/header/mail.png" alt="">info@stolovay.ru</button>
+					<button  class="phone"><img src="../img/header/phone.png" alt="">8 495 790-72-05</button>		
 				</nav>
+
+				<div class="phone__bar disabled">
+
+					<span class="close">X</span>
+
+					<div class="type__of__call">
+						<h5>8 495 790-7205</h5>
+						<p>Мы принимаем звонки без выходных.</p>
+
+						<p>Выберите способ связи:</p>
+
+						<a href="#"><img src="../img/phone/mobile.svg">Мобильный</a>
+						<a href="#"><img src="../img/phone/viber.png">Viber</a>
+						<a href="#"><img src="../img/phone/telegram.png">Telegram</a>
+						<a href="#"><img src="../img/phone/whatsapp.png">Whatsapp</a>
+					</div>
+
+					<div class="reversed__call">
+						<h5>Обратный звонок:</h5>
+						<p>Мы перезвоним вам в течении часа</p>
+
+						<form name="reversedCall">
+							<label for="name">Имя:</label>
+							<input type="text" name="name">
+							<label for="name">Телефон:</label>
+							<input type="text" name="phone">
+
+							<button type="submit">Отправить</button>
+						</form>
+					</div>
+
+
+				</div>
 
 				<button type="button" class="nav__toggle">
 					<div class="nav__toggle__item"></div>
 				</button>
 
 				<nav class="nav">
-					<a href="#">Компания</a>
-					<a href="#">Портфолио</a>
-					<a href="#">Проектирование</a>
+					<a href="#company">Компания</a>
+					<a href="#portfolio">Портфолио</a>
+					<a href="#project">Проектирование</a>
 
-					<a href="#">Ресторанам</a>
-					<a href="#">Застройщикам</a>
-					<a href="#">Гос.заказчикам</a>
-					<a href="#">Таблет-питание</a>
+					<a href="#restorans">Ресторанам</a>
+					<a href="#developers">Застройщикам</a>
+					<a href="#govCust">Гос.заказчикам</a>
+					<a href="#tablet">Таблет-питание</a>
 				</nav>
 			</div>
 		</header>
-	
-		<header class="menu">
+
+		<div class="phone__bar__bg"></div>
+
+		<header id="company" class="menu">
 			<div class="container__top menu">
 			<button type="button" class="logo">
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
@@ -97,7 +133,7 @@
 			</div>
 		</header>
 	
-		<header class="catalog">
+		<header id="tablet" class="catalog">
 			<div class="container__top">
 			<a href="#">
 				<img src="../img/header/catalog/warm.png" alt="">
@@ -159,7 +195,7 @@
 		<div class="main">
 			<div class="container__top">
 
-			<div class="categories">
+			<div id="restorans" class="categories">
 				<h3>
 					Целевые предложения
 				</h3>
@@ -210,9 +246,9 @@
 				</div>
 			</div>
 	
-			<div class="slider">
+			<div id="portfolio" class="slider">
 				<button type="button" class="slider__arrow__left"><</button>
-				<img src="../img/main/slider_1.jpg" alt="">
+				<img src="../img/main/slider_2.jpg" alt="">
 				<div class="slider__text">
 					<span>Портфолио</span>
 					<h2>НИИ скорой помощи им. Н.В. Склифосовского</h2>
@@ -237,7 +273,7 @@
 			</div>
 		</div>
 	
-		<div class="main__bottom">
+		<div id="project" class="main__bottom">
 			<div class="container__top">
 				<div class="logos">
 				<a href="#">
@@ -265,7 +301,7 @@
 			</div>
 		</div>
 	
-		<div class="news">
+		<div id="developers" class="news">
 			<div class="container__content">
 			<h3>Новости производителей</h3>
 			<div class="news__flex">
@@ -324,7 +360,7 @@
 			</div>
 		</div>
 	
-		<div class="recommendation">
+		<div id="govCust" class="recommendation">
 			<div class="container__content">
 			<h3>Рекомендуем</h3>
 			<p>В этих разделах вы можете получить подробную информацию о пищевом оборудовании для столовых, ресторанов и кафе ведущих производителей.</p>
@@ -362,7 +398,7 @@
 			</div>
 		</div>
 	
-		<div class="solutions">
+		<div  id="service" class="solutions">
 			<div class="container__content">
 				<div class="solutions__content">
 					<div class="solution">
@@ -398,7 +434,7 @@
 			</div>
 		</div>
 	
-		<footer>
+		<footer id="contacts">
 			<div class="container__content">
 			<div class="footer__top">
 				<div class="footer__top__content">

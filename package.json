@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Il2281488/Stolovaya#readme",
   "devDependencies": {
     "del": "^7.0.0",
-    "gulp": "^3.9.1"
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0"
   }
 }

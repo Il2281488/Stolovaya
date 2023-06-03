@@ -15,6 +15,22 @@
   font-style: normal;
   font-display: swap;
 }
+@-webkit-keyframes slide-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slide-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
   margin: 0;
   font-family: "MyriadPro Regular", sans-serif;
@@ -50,6 +66,20 @@ p {
 .container__content {
   width: 100%;
   max-width: 1407px;
+}
+
+.phone__bar__bg {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+}
+.phone__bar__bg:after {
+  content: "";
+  position: absolute;
+  width: 2000px;
+  height: 2000px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1500;
 }
 
 .header {
@@ -108,9 +138,41 @@ p {
 .header div nav a:last-child {
   margin-right: -12px;
 }
-.header div nav .mail:after {
+.header div nav .mail {
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: #fff;
+  padding: 20px 12px 20px 12px;
+  margin: 0 6px 0 6px;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  white-space: nowrap;
+  font-size: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header div nav .mail:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.header div nav .mail img {
+  padding: 0 5px;
+}
+.header div nav .mail:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+.header div nav .mail:last-child {
+  margin-right: -12px;
+}
+.header div nav .mail.active:after {
   z-index: 1000;
-  opacity: 0;
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
   position: absolute;
@@ -118,22 +180,197 @@ p {
   background-color: #232323;
   border-radius: 50px;
   padding: 18px 36px;
-  left: 36.7%;
+  left: 35%;
+  top: 100%;
+  cursor: pointer;
 }
-.header div nav .mail:hover {
-  opacity: 1;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.header div nav .mail:active:after {
-  opacity: 1;
-  top: 50%;
-  left: 36.7%;
-  -webkit-transform: translate(0, 60%);
-          transform: translate(0, 60%);
+.header div nav .phone {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: #fff;
+  padding: 20px 12px 20px 12px;
+  margin: 0 6px 0 6px;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  white-space: nowrap;
+  font-size: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .header div nav .phone:hover {
   opacity: 1;
   background-color: rgba(255, 255, 255, 0.2);
+}
+.header div nav .phone img {
+  padding: 0 5px;
+}
+.header div nav .phone:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+.header div nav .phone:last-child {
+  margin-right: -12px;
+}
+.header div .phone__bar {
+  all: unset;
+  position: absolute;
+  background-color: #fff;
+  top: 48px;
+  max-width: 754px;
+  max-height: 364px;
+  z-index: 2000;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  opacity: 0;
+}
+.header div .phone__bar * {
+  all: unset;
+}
+.header div .phone__bar .close {
+  font-weight: 300;
+  font-size: 30px;
+  color: #777777;
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  cursor: pointer;
+}
+.header div .phone__bar .type__of__call {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 120px;
+}
+.header div .phone__bar .type__of__call h5 {
+  color: #00aa4b;
+  font-weight: 300;
+  font-size: 24px;
+}
+.header div .phone__bar .type__of__call p {
+  font-weight: 300;
+  font-size: 16px;
+  color: #777;
+}
+.header div .phone__bar .type__of__call p:last-of-type {
+  color: #000;
+  margin: 25px 0;
+}
+.header div .phone__bar .type__of__call a {
+  position: relative;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 300;
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.header div .phone__bar .type__of__call a:after {
+  display: block;
+  position: absolute;
+  left: 35px;
+  bottom: 2px;
+  width: 0;
+  height: 1px;
+  background-color: #bababa;
+  content: "";
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+}
+.header div .phone__bar .type__of__call a:hover:after, .header div .phone__bar .type__of__call a:focus:after {
+  width: 35%;
+}
+.header div .phone__bar .type__of__call a img {
+  width: 26px;
+  margin-right: 5px;
+}
+.header div .phone__bar .reversed__call {
+  font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.header div .phone__bar .reversed__call h5 {
+  font-size: 24px;
+  font-weight: 300;
+  color: #000;
+}
+.header div .phone__bar .reversed__call p {
+  font-weight: 300;
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 30px;
+}
+.header div .phone__bar .reversed__call form {
+  font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.header div .phone__bar .reversed__call form input {
+  position: relative;
+  font-weight: 300;
+  border-bottom: 1px solid #c6c6c6;
+  margin-bottom: 25px;
+  padding: 10px;
+  font-size: 18px;
+  color: #000;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+.header div .phone__bar .reversed__call form input:focus {
+  border-bottom: 1px solid #ff9d0c;
+}
+.header div .phone__bar .reversed__call form label {
+  content: "Имя:";
+  font-weight: 300;
+  font-size: 16px;
+  color: #000;
+}
+.header div .phone__bar .reversed__call form button {
+  font-weight: 300;
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff;
+  background-color: #ffaf2d;
+  padding: 18px 26px;
+  border-radius: 50px;
+  max-width: 90px;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+.header div .phone__bar .reversed__call form button:hover {
+  background-color: rgb(255, 157, 45);
+}
+.header div .phone__bar.disabled {
+  display: none;
 }
 .header div .vertical_line {
   position: relative;
@@ -217,7 +454,7 @@ p {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  z-index: 1000;
+  z-index: 1111;
   background-color: #00aa4b;
   width: 25%;
 }
@@ -237,7 +474,24 @@ p {
 .header.fixed {
   position: fixed;
   width: 100%;
-  z-index: 1000;
+  z-index: 1001;
+}
+.header.fixed div nav:nth-of-type(2) {
+  display: none;
+}
+.header.fixed div nav:nth-of-type(1) {
+  display: none;
+}
+.header.fixed div .vertical_line {
+  display: none;
+}
+.header.fixed div .nav__toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .menu {
@@ -550,6 +804,10 @@ p {
   position: relative;
   margin: 20px 0 20px 0;
   overflow-x: hidden;
+}
+.main div .slider img.animate {
+  -webkit-animation: slide-animation 1s ease-in-out;
+          animation: slide-animation 1s ease-in-out;
 }
 .main div .slider .slider__arrow__left, .main div .slider .slider__arrow__right {
   font-weight: 300;

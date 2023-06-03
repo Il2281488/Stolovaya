@@ -14,6 +14,22 @@
   font-style: normal;
   font-display: swap;
 }
+@-webkit-keyframes slide-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slide-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
   margin: 0;
   position: relative;
@@ -67,9 +83,10 @@ header div nav {
   display: none;
 }
 header div .nav.active {
-  position: absolute;
+  position: fixed;
   left: 0;
-  top: 99px;
+  top: 0;
+  padding-top: 99px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,7 +100,7 @@ header div .nav.active {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   z-index: 1000;
-  background-color: #f1f1f1;
+  background-color: rgba(241, 241, 241, 0.8);
   width: 30%;
 }
 header div .nav.active a {
@@ -142,6 +159,9 @@ header div .nav__toggle .nav__toggle__item:before, header div .nav__toggle .nav_
 }
 header div .nav__toggle .nav__toggle__item:after {
   top: 24px;
+}
+header div .nav__toggle.active {
+  z-index: 1001;
 }
 header div .nav__toggle.active .nav__toggle__item {
   background: none;
@@ -265,6 +285,10 @@ header div .header__buttons .call {
   top: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
+}
+.slider img.animate {
+  -webkit-animation: slide-animation 1s ease-in-out;
+          animation: slide-animation 1s ease-in-out;
 }
 .slider .slider__text {
   position: absolute;

@@ -1,5 +1,6 @@
-import {deleteSync} from 'del';
+import {deleteAsync} from 'del';
+const del =  deleteAsync;
 
 export const reset = () => {
-    return deleteSync(app.path.clean);
+    return del(app.path.clean);
 }

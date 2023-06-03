@@ -24,6 +24,15 @@
     font-display: swap;
 }
 
+@keyframes slide-animation {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+}
+
 $green: #00aa4b;
 $pale: #e8e7e7;
 $black_bg: #232323;
@@ -88,15 +97,16 @@ header{
 		}
 
 		.nav.active{
-			position: absolute;
+			position: fixed;
 			left: 0;
-			top: 99px;
+			top: 0;
+			padding-top: 99px;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			flex-wrap: wrap;
 			z-index: 1000;
-			background-color: #f1f1f1;
+			background-color: rgba(241,241,241, 0.8);
 			width: 30%;
 			a{
 				text-decoration: none;
@@ -161,6 +171,7 @@ header{
 		}
 	
 		.nav__toggle.active{
+			z-index: 1001;
 			.nav__toggle__item{
 				background: none;
 	
@@ -278,6 +289,10 @@ header{
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, 0);
+	}
+
+	img.animate{
+		animation: slide-animation 1s ease-in-out;
 	}
 
 			
